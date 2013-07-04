@@ -3,39 +3,33 @@
 
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>http://www.smayoorans.blogspot.com | <decorator:title default="Sitemesh Maven Example" /></title>
+    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/bootstrap/css/bootstrap-responsive.css"/>">
+    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/bootstrap/css/bootstrap.css"/>">
 
-<title>http://www.smayoorans.blogspot.com | <decorator:title default="Sitemesh Maven Example" /></title>
-
-<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
-<decorator:head />
-
+    <decorator:head />
 
 </head>
 
 <body>
-<table class="mainTable" id="page-container" cellpadding="5" cellspacing="0" border="1"
-	align="center">
-	<tr>
-		<td colspan="2" id="page-header"><%@ include file="/WEB-INF/includes/header.jsp"%></td>
-	</tr>
-	<tr>
-		<td id="nav-container" colspan="2"><%@ include file="/WEB-INF/includes/navigation.jsp"%></td>
-	</tr>
-	<tr>
-		<td id="left-nav-container"><%@ include file="/WEB-INF/includes/navigationLeft.jsp"%></td>
 
-		<td id="content-container"><decorator:body /></td>
-	</tr>
-	<tr>
-		<td colspan="2" id="page-footer"><%@ include file="/WEB-INF/includes/footer.jsp"%></td>
-	</tr>
-</table>
+<%@ include file="/WEB-INF/includes/navbar.jsp"%>
 
+<decorator:body />
+
+<%@ include file="/WEB-INF/includes/footer.jsp"%>
+
+<script type="text/javascript" src="<c:url value="/resources/bootstrap/js/bootstrap.js"/> "> </script>
 </body>
+
+
 </html>
 
